@@ -1,0 +1,15 @@
+   <!-- //Mobile-View -->
+                 <box1>
+            <!-- elem & emem12... Are Consider Class -->
+        <div id="heset" class="relative sm:hidden">
+            <div class="elem">
+              <h1 class="elem1 uppercase text-5xl font-black mt-2" id="text22">Featured</h1>
+              </div>
+              <div class="elem">
+              <h1 class="elem1 uppercase text-5xl" id="text23"> Modern</h1>
+              </div>
+              <div class="elem">
+              <h1 class="elem1 ml-80 uppercase" id="text33">web</h1>
+              </div>
+            </div>  
+        </box1>
