@@ -116,7 +116,7 @@ class Particle {
   constructor(x, y, vx, vy) {
     this.x = x;
     this.y = y;
-    this.size = Math.random() * 0.5 + 0.2;
+    this.size = Math.random() * 0.7 + 0.2;
     this.speedX = vx + (Math.random() - 0.5) * 2;
     this.speedY = vy + (Math.random() - 0.5) * 2;
     this.alpha = 1;
@@ -149,7 +149,7 @@ window.addEventListener("mousemove", (e) => {
   let dx = e.clientX - lastX;
   let dy = e.clientY - lastY;
 
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 2; i++) {
     particles.push(new Particle(e.clientX, e.clientY, dx * 0.1, dy * 0.1));
   }
 
@@ -205,7 +205,7 @@ Secondpage();
     duration: 1.5,
     scrambleText: {
       text: "A Bit About Me",
-      chars: "ABCSTUYZ4567890",
+      chars: "AKMeGLAbout56Laapo",
       speed: 0.3,
       revealDelay: 0.5,
     },

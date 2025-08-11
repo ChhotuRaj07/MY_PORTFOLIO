@@ -8,6 +8,7 @@
   src: url('fonts/myfont.woff2') format('woff2');
 }
 
+
 body {
   font-family: MyFont, sans-serif;
 }
@@ -27,6 +28,60 @@ html, body {
   padding: 0;
   /* overflow: hidden; */
   /* background: black; */
+}
+
+.glow-container{
+  position: relative;
+  color:  white;
+}
+
+.glow-container::before{
+  content: "";
+  position: absolute;
+  top: -190%;
+  left: 30%;
+  transform: translate(-20% -50%);
+  width: 600px;
+  height: 700px;
+   background: radial-gradient(circle, rgba(0, 255, 200, 0.371) 0%, transparent 55%);
+  filter: blur(150px); /* softness */
+  z-index: -1; /* send behind text */
+}
+
+.glow-container1{
+  position: relative;
+  color:  white;
+}
+
+.glow-container1::before{
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  transform: translate(-50% -50%);
+  width: 500px;
+  height: 600px;
+   background: radial-gradient(circle, rgba(0,255,200,0.3) 0%, transparent 60%);
+  filter: blur(150px); /* softness */
+  z-index: -1; /* send behind text */
+}
+
+.glow-container3{
+  position: relative;
+  color:  white;
+}
+
+.glow-container3::before{
+  content: "";
+  position: absolute;
+  top: -0%;
+  left: 10%;
+  transform: translate(-70% -50%);
+  width: 900px;
+  height: 900px;
+   background: radial-gradient(circle, rgba(0,255,200,0.3) 0%, transparent 60%);
+  filter: blur(150px); /* softness */
+  z-index: -1; /* send behind text */
 }
 
 #canvas {
