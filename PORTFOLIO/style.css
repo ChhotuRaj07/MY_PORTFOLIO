@@ -698,3 +698,13 @@ h1 {
   filter: brightness(200%);
   
 }
+.men {
+  position: absolute; /* stays out of layout flow */
+  top: 1840px;
+  left: 0px;
+  opacity: .6;
+  width: 150%;            /* fills container width */
+  max-height: 1000px;      /* adjust to your desired height */
+  object-fit: contain;    /* keeps aspect ratio */
+}
+
