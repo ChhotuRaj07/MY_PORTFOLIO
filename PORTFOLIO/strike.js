@@ -213,3 +213,16 @@ Secondpage();
     repeatDelay: 0.6,  // delay between loops (optional)
     yoyo: true         // go back and forth (optional for effect)
   });
+
+
+  const container = document.getElementById('container');
+const totalDots = 150;
+
+for (let i = 0; i < totalDots; i++) {
+  const dot = document.createElement('div');
+  dot.className = 'dot';
+  dot.style.background = `hsl(${i * 10}, 100%, 50%)`;
+  dot.style.transform = `rotate(${i * (360 / totalDots)}deg) translate(200px)`;
+  dot.style.animationDelay = `${i * 0.02}s`;
+  container.appendChild(dot);
+}
