@@ -645,13 +645,7 @@ h1 {
   margin-left: 15rem;
 }
 
-.pack{
-  height: 250px;
-  width: 250px;
-  border: 1px solid wheat;
-  border-radius: 7px;
 
-}
 
 #cont{
 
@@ -662,22 +656,6 @@ h1 {
 
 }
 
-.skill{
-  padding-top: 2rem;
-    font-size: 2vw;
-  margin-left: 46vw;
- 
-  font-weight: 600;
-  background:  linear-gradient(90deg,rgba(58, 68, 180, 1) 0%, rgba(41, 185, 195, 1) 42%, rgba(253, 29, 29, 1) 100%, rgba(181, 57, 183, 1) 61%, rgba(81, 196, 216, 1) 71%, rgba(54, 107, 252, 1) 82%, rgba(69, 176, 252, 1) 100%);
-  background-size: 200%; /* smaller scroll area */
-  background-position: 0%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-  animation: glow-move 6s linear infinite;
-  transition-timing-function: cubic-bezier(0.42, 0, 1, 1);
-}
 
 @keyframes glow-move {
   0% {
@@ -691,23 +669,8 @@ h1 {
   }
 }
 
-.skill1{
-  margin-top: 20px;
-  font-size: 1.1vw;
-  margin-left: 35vw;
-  filter: brightness(200%);
-  
-}
-.men {
-  position: absolute; /* stays out of layout flow */
-  top: 1890px;
-  left: 0px;
-  opacity: .6;
-  filter: contrast(150%);
-  width: 150%;            /* fills container width */
-  max-height: 1200px;      /* adjust to your desired height */
-  object-fit: contain;    /* keeps aspect ratio */
-}
+
+
 #page1 {
   position: relative;
   min-height: 100vh;
@@ -809,4 +772,130 @@ h1 {
   z-index: 10;
 }
 
+.pack{
+  height: 310px;
+  width: 250px;
+  border: 1px solid rgba(0, 191, 255, 0.332);
+  border-radius: 10px;
 
+
+  /* remove solid border */
+  /* border: 1px solid wheat; */
+
+  /* add blur border */
+  box-shadow: 0 0 25px 15px rgba(112, 107, 129, 0.748); /* x, y, blur, spread, color */
+  filter: blur(0 0 95px 20px rgba(52, 0, 221, 0.748));
+}
+.skill{
+  padding-top: 2.6rem;
+    text-transform: uppercase;
+    font-size: 4vw;
+  margin-left: 40vw;
+  font-weight: 700;
+  background:  linear-gradient(90deg,rgb(0, 80, 0) 0%, rgba(41, 185, 195, 1) 42%, rgb(85, 144, 247) 100%, rgba(181, 57, 183, 1) 61%, rgba(81, 196, 216, 1) 71%, rgba(54, 107, 252, 1) 82%, rgba(69, 176, 252, 1) 100%);
+  background-size: 200%; /* smaller scroll area */
+  background-position: 0%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family:cursive;
+  font-style: italic;
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  color: transparent;
+  animation: glow-move 6s linear infinite;
+  transition-timing-function: cubic-bezier(0.42, 0, 1, 1);
+}
+
+.skill1{
+  margin-top: 20px;
+  font-size: 1.1vw;
+  margin-left: 33vw;
+  font-family: cur;
+  filter: brightness(200%);
+  text-decoration: wavy;
+  text-transform: capitalize;
+  font-style: italic;
+  font-family: cursive;
+  
+}
+
+.men {
+  position: absolute; /* stays out of layout flow */
+  top: 1830px;
+  left: 0px;
+  opacity: .6;
+  filter: contrast(150%);
+  width: 150%;            /* fills container width */
+  max-height: 1150px;      /* adjust to your desired height */
+  object-fit: fill;    /* keeps aspect ratio */
+}
+
+@property --a { /* must register --a to animate it */
+	syntax: '<angle>';
+	initial-value: 0deg;
+	/* used only on pseudo, nowhere to be inherited, 
+	 * better perf if set false, see 
+	 * https://www.bram.us/2024/10/03/benchmarking-the-performance-of-css-property/ */
+	inherits: false
+}
+
+.pack {
+  	/* hide outer part of glow */
+	overflow: hidden;
+	/* needed for absolutely positioned pseudo */
+	position: relative;
+	/* adjust width as needed IF it's even necessary to set */
+	width: Min(8.5em, 100vmin);
+	/* adjust aspect-ratio OR height IF height not given by content */
+	aspect-ratio: 1;
+	/* round outer card corners */
+	border-radius: .3em;
+  opacity: .7;
+	
+	/* text & layout styles below just for prettifying */
+	place-self: center;
+	place-content: center;
+	padding: .2em;
+	color: #ededed;
+	font: clamp(1em, 2vw + 2vh, 2em) sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+	text-wrap: balance
+}
+
+.pack::before {
+	/* grid doesn't work for stacking when a stacked item is text node */
+	position: absolute;
+	/* place behind card content, so card text is selectable, etc */
+	z-index: -1;
+	/* best if inset is at least half the border-width with minus */
+	inset: -1em;
+	/* reserve space for border */
+	border: solid 1.25em;
+	border-image: 
+		/* adjust gradient as needed, I just used a random palette */
+		conic-gradient(from var(--a), #669900, #d72b75, #d11ca1, 
+				#006699, #3399cc, #990066, #cc3399, 
+				#ff6600, #ff9900, #ffcc00, #669900b5) 1;
+	/* blur this pseudo */
+	filter: blur(.75em);
+	/* tweak animation duration as necessary */
+	animation: a 4s linear infinite;
+	/* needed so pseudo is displayed */
+	content: ''
+}
+
+/* animate --a from its initial-value 0deg to 1turn */
+@keyframes a { to { --a: 1turn } }
+
+.pack img {
+  object-fit: cover;
+  object-position: center;
+  width: 130px;   /* or your preferred size */
+  height: 130px;  /* force square so object-fit works */
+  display: block;
+  margin: 0 auto;
+  filter: contrast(200%);
+   filter: drop-shadow(0 0 15px rgb(24, 184, 233));
+
+}
