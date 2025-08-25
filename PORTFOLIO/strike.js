@@ -205,12 +205,12 @@ Secondpage();
     duration: 1.5,
     scrambleText: {
       text: "A Bit About Me",
-      chars: "AKMeGLAbout56Laapo",
-      speed: 0.3,
-      revealDelay: 0.5,
+      chars: "@#%#&!#@$&^#@^&$@",
+      speed: 0.5,
+      revealDelay: 0.2,
     },
     repeat: -1,        // infinite loop
-    repeatDelay: 0.6,  // delay between loops (optional)
+    repeatDelay: 0.4,  // delay between loops (optional)
     yoyo: true         // go back and forth (optional for effect)
   });
 

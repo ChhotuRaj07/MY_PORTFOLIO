@@ -145,7 +145,7 @@ h1 {
     font-size: 8vw;
     font-weight: 500;
     background: #ffffff;
-  background: linear-gradient(90deg,rgba(255, 255, 255, 1) 14%, rgba(0, 76, 255, 1) 100%);
+  background: linear-gradient(90deg,rgb(255, 0, 0) 14%, rgba(0, 76, 255, 1) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -802,7 +802,7 @@ h1 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-family:cursive;
-  font-style: italic;
+  /* font-style: italic; */
   /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
   color: transparent;
   animation: glow-move 6s linear infinite;
@@ -840,6 +840,18 @@ h1 {
 	 * better perf if set false, see 
 	 * https://www.bram.us/2024/10/03/benchmarking-the-performance-of-css-property/ */
 	inherits: false
+}
+
+ .pack1, .pack2, .pack4, .pack5, .pack6, img {
+  border-radius: 50%;
+}
+
+.pack:not(.pack3), img {
+ border-radius: none;
+}
+
+.pack,p{
+  font-family: cursive;
 }
 
 .pack {
