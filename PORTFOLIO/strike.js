@@ -205,7 +205,7 @@ Secondpage();
     duration: 1.5,
     scrambleText: {
       text: "A Bit About Me",
-      chars: "@#%#&!#@$&^#@^&$@",
+      chars: "@#%#&##@$&%#@%&$@",
       speed: 0.5,
       revealDelay: 0.2,
     },
