@@ -228,12 +228,12 @@ for (let i = 0; i < totalDots; i++) {
 }
 
 const teamMembers = [
-  { name: "Emily Kim", role: "Founder" },
-  { name: "Michael Steward", role: "Creative Director" },
-  { name: "Emma Rodriguez", role: "Lead Developer" },
-  { name: "Julia Gimmel", role: "UX Designer" },
-  { name: "Lisa Anderson", role: "Marketing Manager" },
-  { name: "James Wilson", role: "Product Manager" }
+  { name: "Lanuage", role: "Java" },
+  { name: "Python", role: "Voice Assistance" },
+  { name: "WebDevlopment", role: "Resposive Website" },
+  { name: "Linux", role: "Security" },
+  { name: "Server", role: "Administration Managment" },
+  { name: "Sql", role: "Database Server" }
 ];
 
 const cards = document.querySelectorAll("#team-section .card");
